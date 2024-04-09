@@ -35,8 +35,10 @@ async function taskHandler(taskInput: TaskInput | null): Promise<StepHandler> {
   return stepHandler
 }
 
-Agent.handleTask(taskHandler).start()
+Agent.handleTask(taskHandler, {}).start()
 ```
+
+See the [https://github.com/AI-Engineer-Foundation/agent-protocol/tree/main/packages/sdk/js/examples](examples folder) for running in serverless environments.
 
 ## Docs
 
@@ -46,7 +48,7 @@ You can find more info and examples in the [docs](https://agentprotocol.ai/sdks/
 
 ```bash
 git clone https://github.com/AI-Engineers-Foundation/agent-protocol
-cd agent-protocol/sdk/js
+cd agent-protocol/packages/sdk/js
 npm install
 npm run build
 ```
